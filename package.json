@@ -1,0 +1,18 @@
+{
+  "name": "integration_services",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Test IS",
+  "main": "test1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@iota/is-cli": "^0.0.23",
+    "@iota/is-client": "^0.2.0-alpha.1",
+    "hash.js": "^1.1.7",
+    "json.sortify": "^2.2.2"
+  }
+}
