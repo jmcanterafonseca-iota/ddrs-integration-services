@@ -6,6 +6,8 @@ import hashJs from "hash.js";
 const { sha256 } = hashJs;
 import jsonSortify from "json.sortify";
 
+import fs from "fs";
+
 const config = {
   apiKey: "b85e51a2-9981-11ec-8770-4b8f01948e9b",
   isGatewayUrl: "https://demo-integration-services.iota.cafe",
@@ -20,6 +22,8 @@ async function createUserIdentity() {
     // Create a new user. The user is used for authentication only.
     const username = "User-" + Math.ceil(Math.random() * 100000);
     const userIdentity = await identityClient.create(username);
+
+    fs.writeFileSync("identity.json", JSON.stringify(userIdentity));
 
     return userIdentity;
   } catch (error) {
